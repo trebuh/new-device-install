@@ -1,0 +1,7 @@
+= Install scripts for a new device
+Hubert Cabot <hubert.cabot@decathlon.com>
+
+This repository holds a different install scripts for a new device
+
+== Select a branch
+Select a branch for your use case.
