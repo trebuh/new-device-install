@@ -138,7 +138,7 @@ function InstallVSCodeExtensions() {
 }
 
 
-#InstallWinget
-#InstallPackages
-#InstallVSCodeExtensions
+InstallWinget
+InstallPackages
+InstallVSCodeExtensions
 InstallWSLArchlinux
