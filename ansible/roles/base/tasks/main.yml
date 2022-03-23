@@ -3,16 +3,17 @@
   become: no
   aur:
     skip_installed: true
+    use: makepkg
     name:
-      - ttf-impallari-cabin-font # cv font
-      - glow # render markdown cli
-      - zrepl # zfs snapshot manager
+      - ttf-impallari-cabin-font  # cv font
+      - nerd-fonts-jetbrains-mono # coding font
+      - glow                      # render markdown cli
+      - downgrade                 # downgrade packages
 
 - name: install base packages
   pacman:
     name:
       # Main
-      - ttf-jetbrains-mono # main font
       - noto-fonts         # unicode font
       # Shell
       - fish               # powerful shell
@@ -26,7 +27,7 @@
       - bat                # colorized cat
       - neovim             # futur of vim
       - tree               #
-      - vi                 #
+      - vim                #
       - man                #
       - tmux               # terminal multiplexer
       - asciinema          # term recorder
@@ -54,7 +55,6 @@
       # Utils
       - cronie             # Scheduler
       - at                 # Scheduler
-      - lsd                # improved ls command
       - rsync              # sync tool
       - words              # dictionnaries
       - fzf                # fuzzy finder
