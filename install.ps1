@@ -81,11 +81,12 @@ function InstallPackages() {
     }
 }
 
-function InstallWSLArchlinux() {
-	$filename = "Arch_Online.zip"
+function DownloadWSLDistro() {
+    $wslboxFolder = "$([Environment]::GetFolderPath("MyDocuments"))\wslbox"
+    $filename = "distrod_wsl_launcher-x86_64.zip"
 
 
-	$releases_url = "https://api.github.com/repos/yuk7/ArchWSL/releases/latest"
+	$releases_url = "https://api.github.com/repos/nullpo-head/wsl-distrod/releases/latest"
 
 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 	$releases = Invoke-RestMethod -Uri "$($releases_url)"
@@ -100,6 +101,14 @@ function InstallWSLArchlinux() {
 	Remove-Item -Path "$filename"
 }
 
+function InstallWSLArchlinux() {
+
+    DownloadWSLDistro
+    wsl --set-default-version 2
+    Set-Location -Path  "$wslboxFolder\distrod_wsl_launcher-x86_64"
+    .\distrod_wsl_launcher.exe
+}
+
 function InstallVSCodeExtensions() {
 
     foreach ($Extension in $VSCodeExtensionsList) {
@@ -110,5 +119,5 @@ function InstallVSCodeExtensions() {
 
 InstallWinget
 InstallPackages
-InstallWSLArchlinux
 InstallVSCodeExtensions
+InstallWSLArchlinux
