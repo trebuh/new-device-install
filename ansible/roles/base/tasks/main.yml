@@ -9,6 +9,9 @@
       - nerd-fonts-jetbrains-mono # coding font
       - glow                      # render markdown cli
       - downgrade                 # downgrade packages
+      - asdf-vm                   # ASDF tools versions manager
+      - conftest                  # config tester
+      - downgrade                 # downgrade packages
 
 - name: install base packages
   pacman:
