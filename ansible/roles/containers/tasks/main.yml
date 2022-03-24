@@ -23,6 +23,7 @@
     name:
       - kompose-bin     # docker-compose to manifest convertor
       - k3s-bin         # lightweight Kubernetes in a signle binary 
+      - rancher-k3d-bin # Rancher k8s daemon
       - stern           # tail multiple pods on Kubernetes
       - kubespy         # observe Kubernetes resources in real time
       - krew-bin        # kubectl plugin manager https://github.com/kubernetes-sigs/krew
