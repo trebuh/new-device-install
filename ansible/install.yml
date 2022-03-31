@@ -5,7 +5,6 @@
   vars:
     user: user
     shell: /usr/bin/fish
-    cmdline: "resume=/dev/mapper/swap"
 
   pre_tasks:
 
@@ -16,7 +15,7 @@
 
   roles:
     - { role: pacman, tags: pacman }
-    - { role: aur, tags: aur }
     - { role: base, tags: base }
-    - { role: desktop, tags: desktop }
-    - { role: tools, tags: tools }
+    - { role: aur, tags: aur }
+    - { role: containers, tags: containers }
+
