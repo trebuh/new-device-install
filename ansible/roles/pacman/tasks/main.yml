@@ -18,11 +18,10 @@
         regexp: '#ILoveCandy'
         line: 'ILoveCandy'
         insertafter: '# Misc options'
-    - blockinfile:
+    - lineinfile:
         path: /etc/pacman.conf
-        block: |
-          [multilib]
-          Include = /etc/pacman.d/mirrorlist
+        regexp: '#VerbosePkgLists'
+        line: 'VerbosePkgLists'
 
 - name: Update lists and upgrade
   pacman:
