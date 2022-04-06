@@ -1,7 +1,16 @@
 = Install scripts for a new device
-trebuh
+:author: Trebuh
+:lang: en
 
-This repository holds a different install scripts for a new device
+This repository holds different install scripts for a new device.
 
 == Windows
 Run the Powershell install script to install Archlinux in WSL 2.
+
+== Ansible
+- install https://docs.ansible.com/[ansible]
+- go to the `ansible` directory of this repository
+- install the dependencies: `ansible-galaxy collection install -r requirements.yml`
+- run ansible: `ansible-playbook install.yml -K`
+
+
