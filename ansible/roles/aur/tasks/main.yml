@@ -7,7 +7,7 @@
 
 - name: install AUR helper
   become: no
-  aur:
+  kewlfft.aur.aur:
     name: auracle-git
     use: makepkg
     skip_installed: true
