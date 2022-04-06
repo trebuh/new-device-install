@@ -1,0 +1,7 @@
+= Install scripts for a new device
+trebuh
+
+This repository holds a different install scripts for a new device
+
+== Windows
+Run the Powershell install script to install Archlinux in WSL 2.
