@@ -10,4 +10,4 @@
   kewlfft.aur.aur:
     name: auracle-git
     use: makepkg
-    skip_installed: true
+    state: present

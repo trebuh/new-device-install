@@ -19,7 +19,7 @@
 - name: install containers aur packages
   become: no
   kewlfft.aur.aur:
-    skip_installed: true
+    state: present
     name:
       - kompose-bin     # docker-compose to manifest convertor
       - k3s-bin         # lightweight Kubernetes in a signle binary 

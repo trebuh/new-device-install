@@ -2,7 +2,7 @@
 - name: install aur packages
   become: no
   kewlfft.aur.aur:
-    skip_installed: true
+    state: present
     use: makepkg
     name:
       - ttf-impallari-cabin-font  # cv font
@@ -28,7 +28,7 @@
       - jq                 # json processor
       - most               # colorized pager
       - bat                # colorized cat
-      - neovim             # futur of vim
+      - neovim             # future of vim
       - tree               #
       - vim                #
       - man                #
