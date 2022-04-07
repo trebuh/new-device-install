@@ -15,6 +15,7 @@
       - terraform       # infrastructure as code
       - kubeconform     # verify yaml templates
       - vault           # Vault CLI tool
+      - fluxctl         # Flux CLI
 
 - name: install containers aur packages
   become: no
@@ -28,6 +29,7 @@
       - kubespy         # observe Kubernetes resources in real time
       - krew-bin        # kubectl plugin manager https://github.com/kubernetes-sigs/krew
       - kubeseal-bin    # use sealed-secrets
+      - saml2aws-bin    # Use SAML claims to authenticate to AWS
 
 - name: install pip3 containers packages
   pip:
