@@ -12,6 +12,7 @@
       - asdf-vm                   # ASDF tools versions manager
       - conftest                  # config tester
       - downgrade                 # downgrade packages
+      - powershell-bin            # powershell for Linux (used in VScode)
 
 - name: install base packages
   pacman:
@@ -54,7 +55,7 @@
       - wget               # downloader
       - bind-tools         # dns tools
       - openbsd-netcat     # network utility
-      - speedtest-cli      # 
+      - speedtest-cli      #
       # Utils
       - cronie             # Scheduler
       - at                 # Scheduler
