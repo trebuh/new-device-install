@@ -5,6 +5,7 @@
       - docker          # high level container runtime
       - docker-compose  # multi-container docker apps
       - podman          # docker alternative without dockerd
+      - aws-cli         # CLI tool to interact with AWS
       - kubectl         # kubernetes api cli client
       - kubectx         # switch clusters/namespaces
       - kustomize       # yaml templator
@@ -22,14 +23,15 @@
   kewlfft.aur.aur:
     state: present
     name:
-      - kompose-bin     # docker-compose to manifest convertor
-      - k3s-bin         # lightweight Kubernetes in a signle binary 
-      - rancher-k3d-bin # Rancher k8s daemon
-      - stern           # tail multiple pods on Kubernetes
-      - kubespy         # observe Kubernetes resources in real time
-      - krew-bin        # kubectl plugin manager https://github.com/kubernetes-sigs/krew
-      - kubeseal-bin    # use sealed-secrets
-      - saml2aws-bin    # Use SAML claims to authenticate to AWS
+      - kompose-bin       # docker-compose to manifest convertor
+      - k3s-bin           # lightweight Kubernetes in a signle binary
+      - rancher-k3d-bin   # Rancher k8s daemon
+      - stern             # tail multiple pods on Kubernetes
+      - kubespy           # observe Kubernetes resources in real time
+      - krew-bin          # kubectl plugin manager https://github.com/kubernetes-sigs/krew
+      - kubeseal-bin      # use sealed-secrets
+      - google-cloud-sdk  # CLI tool to interact with GCP
+      - saml2aws-bin      # use SAML claims to authenticate to AWS
 
 - name: install pip3 containers packages
   pip:
