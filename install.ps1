@@ -51,7 +51,7 @@ $VSCodeExtensionsList = @(
 "tsandall.opa",
 # Bridgecrew checkov
 "bridgecrew.checkov",
-# Markdown linter	
+# Markdown linter
 "davidanson.vscode-markdownlint",
 # Asciidoctor
 "asciidoctor.asciidoctor-vscode"
@@ -72,7 +72,7 @@ function InstallWinGet() {
 		[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 		$releases = Invoke-RestMethod -uri "$($releases_url)"
 		$latestRelease = $releases.assets | Where-Object { $_.browser_download_url.EndsWith("msixbundle") } | Select-Object -First 1
-	
+
 		Add-AppxPackage -Path $latestRelease.browser_download_url
 	}
 }
@@ -89,31 +89,30 @@ function DownloadWSLDistro() {
     $filename = "distrod_wsl_launcher-x86_64.zip"
 
 
-	$releases_url = "https://api.github.com/repos/nullpo-head/wsl-distrod/releases/latest"
+    $releases_url = "https://api.github.com/repos/nullpo-head/wsl-distrod/releases/latest"
 
-	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-	$releases = Invoke-RestMethod -Uri "$($releases_url)"
-	$latestRelease = $releases.assets | Where-Object { $_.browser_download_url.EndsWith("$filename") } | Select-Object -First 1
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    $releases = Invoke-RestMethod -Uri "$($releases_url)"
+    $latestRelease = $releases.assets | Where-Object { $_.browser_download_url.EndsWith("$filename") } | Select-Object -First 1
 
-	New-Item -Path "$wslboxFolder" -ItemType Directory | Out-Null
+    New-Item -Path "$wslboxFolder" -ItemType Directory | Out-Null
 
-
-	Invoke-RestMethod -Uri $latestRelease.browser_download_url -OutFile $filename
+    Invoke-RestMethod -Uri $latestRelease.browser_download_url -OutFile $filename
 	Expand-Archive -Path "$filename" -DestinationPath "$wslboxFolder" | Out-Null
 
-    Move-Item -Path "$wslboxFolder\distrod_wsl_launcher-x86_64\distrod_wsl_launcher.exe"  -Destination  "$wslboxFolder"    
+    Move-Item -Path "$wslboxFolder\distrod_wsl_launcher-x86_64\distrod_wsl_launcher.exe"  -Destination  "$wslboxFolder"
     Remove-Item -Path "$wslboxFolder\distrod_wsl_launcher-x86_64"
-	
+
 	Remove-Item -Path "$filename"
 }
 
 function UpdateWSL() {
-	wsl --set-default-version 2
-	
+    wsl --set-default-version 2
+
 	Set-Location -Path "$wslboxFolder"
 	$wsl_update_msi_url = "https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"
 	Invoke-RestMethod -Uri "$wsl_update_msi_url" -OutFile "wsl_update_x64.msi"
-	
+
 	.\wsl_update_x64.msi
 
 	Remove-Item -Path "wsl_update_x64.msi"
@@ -138,6 +137,7 @@ function InstallVSCodeExtensions() {
 }
 
 
+InstallFonts
 InstallWinget
 InstallPackages
 InstallVSCodeExtensions
