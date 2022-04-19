@@ -63,18 +63,18 @@ $box_name = "Archbox"
 
 
 function InstallWinGet() {
-	$hasPackageManager = Get-AppPackage -name "Microsoft.DesktopAppInstaller"
+    $hasPackageManager = Get-AppPackage -name "Microsoft.DesktopAppInstaller"
 
-	if(!$hasPackageManager)
-	{
-		$releases_url = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
+    if(!$hasPackageManager)
+    {
+        $releases_url = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
 
-		[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-		$releases = Invoke-RestMethod -uri "$($releases_url)"
-		$latestRelease = $releases.assets | Where-Object { $_.browser_download_url.EndsWith("msixbundle") } | Select-Object -First 1
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        $releases = Invoke-RestMethod -uri "$($releases_url)"
+        $latestRelease = $releases.assets | Where-Object { $_.browser_download_url.EndsWith("msixbundle") } | Select-Object -First 1
 
-		Add-AppxPackage -Path $latestRelease.browser_download_url
-	}
+        Add-AppxPackage -Path $latestRelease.browser_download_url
+    }
 }
 
 function InstallPackages() {
@@ -98,32 +98,30 @@ function DownloadWSLDistro() {
     New-Item -Path "$wslboxFolder" -ItemType Directory | Out-Null
 
     Invoke-RestMethod -Uri $latestRelease.browser_download_url -OutFile $filename
-	Expand-Archive -Path "$filename" -DestinationPath "$wslboxFolder" | Out-Null
+    Expand-Archive -Path "$filename" -DestinationPath "$wslboxFolder" | Out-Null
 
     Move-Item -Path "$wslboxFolder\distrod_wsl_launcher-x86_64\distrod_wsl_launcher.exe"  -Destination  "$wslboxFolder"
     Remove-Item -Path "$wslboxFolder\distrod_wsl_launcher-x86_64"
 
-	Remove-Item -Path "$filename"
+    Remove-Item -Path "$filename"
 }
 
 function UpdateWSL() {
     wsl --set-default-version 2
 
-	Set-Location -Path "$wslboxFolder"
-	$wsl_update_msi_url = "https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"
-	Invoke-RestMethod -Uri "$wsl_update_msi_url" -OutFile "wsl_update_x64.msi"
+    Set-Location -Path "$wslboxFolder"
+    $wsl_update_msi_url = "https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"
+    Invoke-RestMethod -Uri "$wsl_update_msi_url" -OutFile "wsl_update_x64.msi"
 
-	.\wsl_update_x64.msi
+    .\wsl_update_x64.msi
 
-	Remove-Item -Path "wsl_update_x64.msi"
-
-
-
+    Remove-Item -Path "wsl_update_x64.msi"
 }
+
 function InstallWSLArchlinux() {
 
     DownloadWSLDistro
-	UpdateWSL
+    UpdateWSL
 
     Set-Location -Path "$wslboxFolder"
     .\distrod_wsl_launcher.exe -d "$box_name"
