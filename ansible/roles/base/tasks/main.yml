@@ -71,6 +71,7 @@
       - dmidecode          # dump dmi table content
       - python-pre-commit  # pre-commit hook manager
       - mypy               # Python static type checker
+      - python-black       # Python linter
     state: present
 
 - name: Configure root
