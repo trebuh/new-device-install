@@ -70,6 +70,7 @@
       - python-pip         # python3 package manager
       - dmidecode          # dump dmi table content
       - python-pre-commit  # pre-commit hook manager
+      - mypy               # Python static type checker
     state: present
 
 - name: Configure root
