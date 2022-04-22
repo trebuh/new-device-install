@@ -134,7 +134,7 @@ function InstallVSCodeExtensions() {
     }
 }
 
-function InstallFont(s) {
+function InstallFonts() {
     # TODO
 }
 
