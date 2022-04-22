@@ -134,6 +134,9 @@ function InstallVSCodeExtensions() {
     }
 }
 
+function InstallFont(s) {
+    # TODO
+}
 
 InstallFonts
 InstallWinget
