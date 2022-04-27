@@ -23,6 +23,7 @@
       - fish               # powerful shell
       - zsh
       - starship           # cross-shell prompt
+        # Tools
       - git                #
       - exa                # powerful ls
       - bc                 # maths
@@ -67,11 +68,13 @@
       - cifs-utils         #
       - shellcheck         # sh linter
       - oath-toolkit       # otp tool
-      - python-pip         # python3 package manager
       - dmidecode          # dump dmi table content
       - python-pre-commit  # pre-commit hook manager
+        # python development
       - mypy               # Python static type checker
       - python-black       # Python linter
+      - python-pip         # python3 package manager
+      - python-poetry      # Modern Python build solution
     state: present
 
 - name: Configure root
