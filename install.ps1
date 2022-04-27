@@ -54,7 +54,9 @@ $VSCodeExtensionsList = @(
 # Markdown linter
 "davidanson.vscode-markdownlint",
 # Asciidoctor
-"asciidoctor.asciidoctor-vscode"
+"asciidoctor.asciidoctor-vscode",
+# Better TOML support
+"bungcip.better-toml"
 )
 
 $wslboxFolder = "$([Environment]::GetFolderPath("MyDocuments"))\wslbox"
