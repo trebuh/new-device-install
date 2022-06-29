@@ -2,41 +2,40 @@
 - name: install containers packages
   pacman:
     name:
-      - docker          # high level container runtime
-      - docker-compose  # multi-container docker apps
-      - podman          # docker alternative without dockerd
-      - aws-cli         # CLI tool to interact with AWS
-      - kubectl         # kubernetes api cli client
-      - kubectx         # switch clusters/namespaces
-      - kustomize       # yaml templator
-      - minikube        # virtualized local kubernetes cluster
-      - k9s             # UI to interact with Kubernetes clusters
-      - helm            # kubernetes package manager
-      - packer          # golden images creator
-      - terraform       # infrastructure as code
-      - kubeconform     # verify yaml templates
-      - vault           # Vault CLI tool
-      - fluxctl         # Flux CLI
+      - docker # high level container runtime
+      - docker-compose # multi-container docker apps
+      - podman # docker alternative without dockerd
+      - aws-cli # CLI tool to interact with AWS
+      - kubectl # kubernetes api cli client
+      - kubectx # switch clusters/namespaces
+      - kustomize # yaml templator
+      - k9s # UI to interact with Kubernetes clusters
+      - helm # kubernetes package manager
+      - packer # golden images creator
+      - terraform # infrastructure as code
+      - kubeconform # verify yaml templates
+      - vault # Vault CLI tool
+      - fluxctl # Flux CLI
 
 - name: install containers aur packages
   become: no
   kewlfft.aur.aur:
     state: present
     name:
-      - kompose-bin       # docker-compose to manifest convertor
-      - k3s-bin           # lightweight Kubernetes in a signle binary
-      - rancher-k3d-bin   # Rancher k8s daemon
-      - stern             # tail multiple pods on Kubernetes
-      - kubespy           # observe Kubernetes resources in real time
-      - krew-bin          # kubectl plugin manager https://github.com/kubernetes-sigs/krew
-      - kubeseal-bin      # use sealed-secrets
-      - google-cloud-sdk  # CLI tool to interact with GCP
-      - saml2aws-bin      # use SAML claims to authenticate to AWS
+      - kompose-bin # docker-compose to manifest convertor
+      - k3s-bin # lightweight Kubernetes in a signle binary
+      - rancher-k3d-bin # Rancher k8s daemon
+      - stern # tail multiple pods on Kubernetes
+      - kubespy # observe Kubernetes resources in real time
+      - krew-bin # kubectl plugin manager https://github.com/kubernetes-sigs/krew
+      - kubeseal-bin # use sealed-secrets
+      - google-cloud-sdk # CLI tool to interact with GCP
+      - saml2aws-bin # use SAML claims to authenticate to AWS
 
 - name: install pip3 containers packages
   pip:
     name:
-      - podman-compose  # mutli-container podman apps
+      - podman-compose # mutli-container podman apps
 
 - name: copy subuid files for podman rootless
   template:
@@ -57,6 +56,6 @@
 
 - name: Add user to docker group
   user:
-    name: '{{ user }}'
+    name: "{{ user }}"
     groups: docker
     append: yes
