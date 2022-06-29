@@ -28,6 +28,7 @@
       - stern # tail multiple pods on Kubernetes
       - kubespy # observe Kubernetes resources in real time
       - krew-bin # kubectl plugin manager https://github.com/kubernetes-sigs/krew
+      - kind-bin # Kubernetes IN Docker
       - kubeseal-bin # use sealed-secrets
       - google-cloud-sdk # CLI tool to interact with GCP
       - saml2aws-bin # use SAML claims to authenticate to AWS
