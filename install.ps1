@@ -13,50 +13,16 @@ $PackagesList = @(
 )
 
 $VSCodeExtensionsList = @(
+# French Language Pack
+"ms-ceintl.vscode-language-pack-fr"
 # Theme
 "GitHub.github-vscode-theme",
 "pkief.material-product-icons",
 "PKief.material-icon-theme",
 # Remote WSL
 "ms-vscode-remote.remote-wsl",
-# Docker and kubernetes
-"ms-azuretools.vscode-docker",
-"ms-kubernetes-tools.vscode-kubernetes-tools",
 # Powershell
-"ms-vscode.powershell",
-# Terraform
-"hashicorp.terraform",
-"erd0s.terraform-autocomplete",
-"pjmiravalle.terraform-advanced-syntax-highlighting",
-# Search in JSON
-"weijunyu.vscode-json-path",
-# CSV coloration and RBQL support
-"mechatroner.rainbow-csv",
-# YAML and k8s stubs support
-"redhat.vscode-yaml",
-# XML linter
-"dotjoshjohnson.xml",
-# Python and associated language server
-"ms-python.python",
-"ms-python.vscode-pylance",
-# Go
-"golang.go",
-# Shellcheck
-"timonwong.shellcheck",
-# Jinja templating
-"samuelcolvin.jinjahtml",
-# Bats support
-"jetmartin.bats",
-# Open Policy Agent
-"tsandall.opa",
-# Bridgecrew checkov
-"bridgecrew.checkov",
-# Markdown linter
-"davidanson.vscode-markdownlint",
-# Asciidoctor
-"asciidoctor.asciidoctor-vscode",
-# Better TOML support
-"bungcip.better-toml"
+"ms-vscode.powershell"
 )
 
 $wslboxFolder = "$([Environment]::GetFolderPath("MyDocuments"))\wslbox"
