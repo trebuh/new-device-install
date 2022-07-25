@@ -40,3 +40,5 @@
     - asciidoctor.asciidoctor-vscode
     # Better TOML support
     - bungcip.better-toml
+    # Makefile support
+    - ms-vscode.makefile-tools
