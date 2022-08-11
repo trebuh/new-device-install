@@ -16,6 +16,7 @@
       - kubeconform # verify yaml templates
       - vault # Vault CLI tool
       - fluxctl # Flux CLI
+      - eksctl # Manage EKS clusters
 
 - name: install containers aur packages
   become: no
