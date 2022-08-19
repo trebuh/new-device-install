@@ -42,3 +42,5 @@
     - bungcip.better-toml
     # Makefile support
     - ms-vscode.makefile-tools
+    # Puppet DSL support
+    - puppet.puppet-vscode
