@@ -13,6 +13,7 @@
       - conftest                  # config tester
       - downgrade                 # downgrade packages
       - powershell-bin            # powershell for Linux (used in VScode)
+      - pdk                       # Puppet Development Kit
 
 - name: install base packages
   pacman:
@@ -75,6 +76,8 @@
       - python-black       # Python linter
       - python-pip         # python3 package manager
       - python-poetry      # Modern Python build solution
+      - python-poetry      # Modern Python build solution
+      - puppet             # Puppet
     state: present
 
 - name: Configure root
