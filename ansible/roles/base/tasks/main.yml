@@ -78,6 +78,7 @@
       - python-poetry      # Modern Python build solution
       - python-poetry      # Modern Python build solution
       - puppet             # Puppet
+      - graphviz           # graphs vizualiser
     state: present
 
 - name: Configure root
