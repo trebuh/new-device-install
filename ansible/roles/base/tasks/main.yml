@@ -76,7 +76,6 @@
       - python-black       # Python linter
       - python-pip         # python3 package manager
       - python-poetry      # Modern Python build solution
-      - python-poetry      # Modern Python build solution
       - puppet             # Puppet
       - graphviz           # graphs vizualiser
     state: present
