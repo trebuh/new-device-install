@@ -14,6 +14,7 @@
       - downgrade                 # downgrade packages
       - powershell-bin            # powershell for Linux (used in VScode)
       - pdk                       # Puppet Development Kit
+      - tflint                    # a Terraform linter
 
 - name: install base packages
   pacman:
