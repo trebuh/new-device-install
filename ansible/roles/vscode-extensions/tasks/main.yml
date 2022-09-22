@@ -44,3 +44,5 @@
     - ms-vscode.makefile-tools
     # Puppet DSL support
     - puppet.puppet-vscode
+    # Pre-commit support
+    - MarkLarah.pre-commit-vscode
