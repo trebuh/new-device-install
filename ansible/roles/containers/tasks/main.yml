@@ -33,6 +33,7 @@
       - kubeseal-bin # use sealed-secrets
       - google-cloud-sdk # CLI tool to interact with GCP
       - saml2aws-bin # use SAML claims to authenticate to AWS
+      - google-cloud-sdk-gke-gcloud-auth-plugin # gcloud plugin to authenticate on GKE clusters
 
 - name: install pip3 containers packages
   pip:
