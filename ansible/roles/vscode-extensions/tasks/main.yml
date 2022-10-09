@@ -23,6 +23,8 @@
     - ms-python.vscode-pylance
     # Go
     - golang.go
+    # Java
+    - vscjava.vscode-java-pack
     # Shellcheck
     - timonwong.shellcheck
     # Jinja templating

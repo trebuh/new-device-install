@@ -77,6 +77,11 @@
       - python-pip         # python3 package manager
       - python-poetry      # Modern Python build solution
       - graphviz           # graphs vizualiser
+      - jre-openjdk        # Java JDK
+      - openjdk-src        # Java JDK source
+      - openjdk-doc        # Java JDK documentation
+      - maven              # Maven project builder
+      - gradle             # Gradle build system
     state: present
 
 - name: Configure root
