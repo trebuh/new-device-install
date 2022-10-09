@@ -10,7 +10,6 @@
     # Terraform
     - hashicorp.terraform
     - erd0s.terraform-autocomplete
-    - pjmiravalle.terraform-advanced-syntax-highlighting
     # Search in JSON
     - weijunyu.vscode-json-path
     # CSV coloration and RBQL support
@@ -28,8 +27,6 @@
     - timonwong.shellcheck
     # Jinja templating
     - samuelcolvin.jinjahtml
-    # Bats support
-    - jetmartin.bats
     # Open Policy Agent
     - tsandall.opa
     # Bridgecrew checkov
