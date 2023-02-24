@@ -82,6 +82,7 @@
       - openjdk-doc        # Java JDK documentation
       - maven              # Maven project builder
       - gradle             # Gradle build system
+      - lsof               #
     state: present
 
 - name: Configure root
