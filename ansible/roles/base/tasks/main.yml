@@ -82,7 +82,8 @@
       - openjdk-doc        # Java JDK documentation
       - maven              # Maven project builder
       - gradle             # Gradle build system
-      - lsof               #
+      - lsof               # List Open Files
+      - bash-bats          # Bash Automation Testing System
     state: present
 
 - name: Configure root
