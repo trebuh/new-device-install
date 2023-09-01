@@ -24,6 +24,7 @@
     state: present
     name:
       - kompose-bin # docker-compose to manifest convertor
+      - flux-bin # Weave flux binary
       - k3s-bin # lightweight Kubernetes in a signle binary
       - rancher-k3d-bin # Rancher k8s daemon
       - stern # tail multiple pods on Kubernetes
