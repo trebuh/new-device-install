@@ -45,3 +45,6 @@
     - MarkLarah.pre-commit-vscode
     # Dependency analysis tool
     - redhat.fabric8-analytics
+    # Snyk scanner
+    - snyk-security.snyk-vulnerability-scanner
+
