@@ -49,3 +49,5 @@
     - snyk-security.snyk-vulnerability-scanner
     # Black Python linter
     - ms-python.black-formatter
+    # Rainbow indenter (to use in light mode)
+    - oderwat.indent-rainbow
