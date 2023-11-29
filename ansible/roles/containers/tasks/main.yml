@@ -15,6 +15,7 @@
       - terraform # infrastructure as code
       - kubeconform # verify yaml templates
       - vault # Vault CLI tool
+      - flux # Weave flux binary
       - fluxctl # Flux CLI
       - eksctl # Manage EKS clusters
 
@@ -24,7 +25,6 @@
     state: present
     name:
       - kompose-bin # docker-compose to manifest convertor
-      - flux-bin # Weave flux binary
       - k3s-bin # lightweight Kubernetes in a signle binary
       - rancher-k3d-bin # Rancher k8s daemon
       - stern # tail multiple pods on Kubernetes
