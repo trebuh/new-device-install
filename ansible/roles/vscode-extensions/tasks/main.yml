@@ -43,8 +43,8 @@
     - ms-vscode.makefile-tools
     # Pre-commit support
     - MarkLarah.pre-commit-vscode
-    # Dependency analysis tool
-    - redhat.fabric8-analytics
+    # Mermaid diagrams preview in docs
+    - vstirbu.vscode-mermaid-preview
     # Snyk scanner
     - snyk-security.snyk-vulnerability-scanner
     # Black Python linter
