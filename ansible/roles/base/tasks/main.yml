@@ -5,97 +5,98 @@
     state: present
     use: makepkg
     name:
-      - ttf-impallari-cabin-font  # cv font
+      - ttf-impallari-cabin-font # cv font
       - nerd-fonts-jetbrains-mono # coding font
-      - glow                      # render markdown cli
-      - downgrade                 # downgrade packages
-      - asdf-vm                   # ASDF tools versions manager
-      - conftest                  # config tester
-      - downgrade                 # downgrade packages
-      - powershell-bin            # powershell for Linux (used in VScode)
-      - tflint                    # a Terraform linter
-      - snyk                      # Snyk CLI scanner
+      - glow # render markdown cli
+      - downgrade # downgrade packages
+      - asdf-vm # ASDF tools versions manager
+      - conftest # config tester
+      - downgrade # downgrade packages
+      - powershell-bin # powershell for Linux (used in VScode)
+      - tflint # a Terraform linter
+      - snyk # Snyk CLI scanner
 
 - name: install base packages
   pacman:
     name:
       # Main
-      - noto-fonts         # unicode font
+      - noto-fonts # unicode font
       # Shell
-      - fish               # powerful shell
+      - fish # powerful shell
       - zsh
-      - starship           # cross-shell prompt
+      - starship # cross-shell prompt
         # Tools
-      - git                #
-      - exa                # powerful ls
-      - bc                 # maths
-      - jq                 # json processor
-      - most               # colorized pager
-      - bat                # colorized cat
-      - neovim             # future of vim
-      - tree               #
-      - vim                #
-      - man                #
-      - tmux               # terminal multiplexer
-      - asciinema          # term recorder
-      - expect             # automation tool
-      - arch-audit         # list vulnerabilities
+      - git #
+      - exa # powerful ls
+      - bc # maths
+      - jq # json processor
+      - most # colorized pager
+      - bat # colorized cat
+      - neovim # future of vim
+      - tree #
+      - vim #
+      - man #
+      - tmux # terminal multiplexer
+      - asciinema # term recorder
+      - expect # automation tool
+      - arch-audit # list vulnerabilities
       # System
-      - htop               # system monitor
-      - net-tools          # netstat
-      - reflector          # mirror sorter
-      - nmap               # port scanner
-      - tcpdump            # packet analyzer
-      - whois              # query registry
-      - stress             # stress test tool
+      - htop # system monitor
+      - net-tools # netstat
+      - reflector # mirror sorter
+      - nmap # port scanner
+      - tcpdump # packet analyzer
+      - whois # query registry
+      - stress # stress test tool
       # Disk
-      - iotop              # disk "top"
-      - ncdu               # disk usage analyzer
+      - iotop # disk "top"
+      - ncdu # disk usage analyzer
       # Network
-      - nethogs            # net "top"
-      - openssh            #
-      - keychain           # ssh-agent wrapper
-      - wget               # downloader
-      - bind-tools         # dns tools
-      - openbsd-netcat     # network utility
-      - speedtest-cli      #
+      - nethogs # net "top"
+      - openssh #
+      - keychain # ssh-agent wrapper
+      - wget # downloader
+      - bind-tools # dns tools
+      - openbsd-netcat # network utility
+      - speedtest-cli #
       # Utils
-      - cronie             # Scheduler
-      - at                 # Scheduler
-      - rsync              # sync tool
-      - words              # dictionnaries
-      - fzf                # fuzzy finder
-      - neofetch           #
-      - unzip              # uncompress zip
-      - cifs-utils         #
-      - shellcheck         # sh linter
-      - oath-toolkit       # otp tool
-      - dmidecode          # dump dmi table content
-      - python-pre-commit  # pre-commit hook manager
+      - cronie # Scheduler
+      - at # Scheduler
+      - rsync # sync tool
+      - words # dictionnaries
+      - fzf # fuzzy finder
+      - neofetch #
+      - unzip # uncompress zip
+      - cifs-utils #
+      - shellcheck # sh linter
+      - oath-toolkit # OTP tool
+      - dmidecode # dump dmi table content
+      - python-pre-commit # pre-commit hook manager
         # python development
-      - mypy               # Python static type checker
-      - python-black       # Python linter
-      - python-pip         # python3 package manager
-      - python-poetry      # Modern Python build solution
-      - graphviz           # graphs vizualiser
-      - jre-openjdk        # Java JDK
-      - openjdk-src        # Java JDK source
-      - openjdk-doc        # Java JDK documentation
-      - maven              # Maven project builder
-      - gradle             # Gradle build system
-      - lsof               # List Open Files
-      - bash-bats          # Bash Automation Testing System
+      - mypy # Python static type checker
+      - python-black # Python linter
+      - python-pip # python3 package manager
+      - python-poetry # Modern Python build solution
+      - graphviz # graphs vizualiser
+      - jre-openjdk # Java JDK
+      - openjdk-src # Java JDK source
+      - openjdk-doc # Java JDK documentation
+      - maven # Maven project builder
+      - gradle # Gradle build system
+      - lsof # List Open Files
+      - bash-bats # Bash Automation Testing System
+      - git-delta # Cool diff tool for git
     state: present
 
 - name: Configure root
   user:
     name: root
-    shell: '{{shell}}'
+    shell: "{{shell}}"
 
 - name: Configure user
   user:
-    name: '{{user}}'
-    shell: '{{shell}}'
+    name: "{{user}}"
+    shell: "{{shell}}"
 
 - name: set timezone
   shell: timedatectl set-timezone Europe/Paris
