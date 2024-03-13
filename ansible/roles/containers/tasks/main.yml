@@ -4,6 +4,7 @@
     name:
       - docker # high level container runtime
       - docker-compose # multi-container docker apps
+      - docker-buildx # docker CLI plugin for buildx
       - podman # docker alternative without dockerd
       - aws-cli # CLI tool to interact with AWS
       - kubectl # kubernetes api cli client
