@@ -86,6 +86,7 @@
       - lsof # List Open Files
       - bash-bats # Bash Automation Testing System
       - git-delta # Cool diff tool for git
+      - libfido2 # Library to use FIDO 2 security keys such as Yubikeys
     state: present
 
 - name: Configure root
