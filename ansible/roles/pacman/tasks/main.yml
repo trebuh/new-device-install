@@ -3,25 +3,25 @@
   block:
     - lineinfile:
         path: /etc/pacman.conf
-        regexp: '#Color'
-        line: 'Color'
+        regexp: "#Color"
+        line: "Color"
     - lineinfile:
         path: /etc/pacman.conf
-        regexp: '#UseSyslog'
-        line: 'UseSyslog'
+        regexp: "#UseSyslog"
+        line: "UseSyslog"
     - lineinfile:
         path: /etc/pacman.conf
-        regexp: '#CheckSpace'
-        line: 'CheckSpace'
+        regexp: "#CheckSpace"
+        line: "CheckSpace"
     - lineinfile:
         path: /etc/pacman.conf
-        regexp: '#ILoveCandy'
-        line: 'ILoveCandy'
-        insertafter: '# Misc options'
+        regexp: "#ILoveCandy"
+        line: "ILoveCandy"
+        insertafter: "# Misc options"
     - lineinfile:
         path: /etc/pacman.conf
-        regexp: '#VerbosePkgLists'
-        line: 'VerbosePkgLists'
+        regexp: "#VerbosePkgLists"
+        line: "VerbosePkgLists"
 
 - name: Update lists and upgrade
   pacman:
