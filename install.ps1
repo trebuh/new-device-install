@@ -23,10 +23,6 @@ $VSCodeExtensionsList = @(
 "ms-vscode-remote.remote-wsl",
 # Powershell
 "ms-vscode.powershell",
-# Bats support
-"jetmartin.bats",
-# Advanced Terraform syntax
-"pjmiravalle.terraform-advanced-syntax-highlighting"
 )
 
 $wslboxFolder = "$([Environment]::GetFolderPath("MyDocuments"))\wslbox"
