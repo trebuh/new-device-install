@@ -43,3 +43,9 @@
   systemd:
     name: linux-modules-cleanup
     enabled: yes
+
+- name: enable pcscd # Smart Card Daemon ( useful for Yubikey handling )
+  systemd:
+    name: pcscd
+    enabled: yes
+    state: started
