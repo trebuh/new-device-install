@@ -6,7 +6,6 @@
     use: makepkg
     name:
       - ttf-impallari-cabin-font # cv font
-      - nerd-fonts-jetbrains-mono # coding font
       - glow # render markdown cli
       - downgrade # downgrade packages
       - asdf-vm # ASDF tools versions manager
@@ -22,6 +21,7 @@
     name:
       # Main
       - noto-fonts # unicode font
+      - ttf-jetbrains-mono-nerd # coding font
       # Shell
       - fish # powerful shell
       - zsh
