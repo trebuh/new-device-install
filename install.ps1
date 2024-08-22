@@ -10,6 +10,7 @@ $PackagesList = @(
 "7zip.7zip",
 "Postman.Postman",
 "SumatraPDF.SumatraPDF"
+"dorssel.usbipd-win" # Install https://github.com/dorssel/usbipd-win to share Yubikey from Windows to WSL
 )
 
 $VSCodeExtensionsList = @(
