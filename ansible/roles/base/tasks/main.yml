@@ -8,7 +8,6 @@
       - ttf-impallari-cabin-font # cv font
       - glow # render markdown cli
       - downgrade # downgrade packages
-      - asdf-vm # ASDF tools versions manager
       - conftest # config tester
       - downgrade # downgrade packages
       - powershell-bin # powershell for Linux (used in VScode)
