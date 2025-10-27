@@ -89,6 +89,7 @@
       - usbutils # Tools to interact with USB devices
       - libfido2 # Library to use FIDO 2 security keys such as Yubikeys
       - yubikey-mananger # Yubikey Manager
+      - mise # Mise tools versions manager
     state: present
 
 - name: Configure root
