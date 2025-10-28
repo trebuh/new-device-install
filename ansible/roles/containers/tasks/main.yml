@@ -19,6 +19,7 @@
       - flux # Weave flux binary
       - fluxctl # Flux CLI
       - eksctl # Manage EKS clusters
+      - cosign # Sign OCI containers
 
 - name: install containers aur packages
   become: no
@@ -35,6 +36,7 @@
       - kubeseal-bin # use sealed-secrets
       - google-cloud-cli # CLI tool to interact with GCP
       - google-cloud-cli-gke-gcloud-auth-plugin # gcloud plugin to authenticate on GKE clusters
+      - slsa-verifier # Verify provenance
 
 - name: install pip3 containers packages
   pip:
