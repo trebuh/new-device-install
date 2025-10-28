@@ -90,6 +90,7 @@
       - libfido2 # Library to use FIDO 2 security keys such as Yubikeys
       - yubikey-mananger # Yubikey Manager
       - mise # Mise tools versions manager
+      - usage # A Specification for CLIs
     state: present
 
 - name: Configure root
